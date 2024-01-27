@@ -1,7 +1,10 @@
 const axios = require('axios');
 
-const apiKey = 'at_Ct6z8d1M4zLMQbIH37EV44JG1IOnu';
-const domainToCheck = 'ibm.com';
+require('dotenv').config();
+
+const apiKey = process.env.WHOIS_KEY;
+
+const domainToCheck = 'ibm-ds.com';
 
 // WHOISXMLAPI endpoint URL
 const endpointUrl = `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=${apiKey}&domainName=${domainToCheck}&outputFormat=JSON`;
